@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Inter:wght@700&family=Rubik:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>BMI Calculator</title>
+</head>
+
+<body class="light-mode">
+    <div class="switch-container">
+        <label id="switch" class="switch">
+        <input type="checkbox" onchange="toggleTheme()" id="slider">
+        <span class="slider round"></span>
+    </label>
+    </div>
+    
+    <div class="container">
+        
+        <div class="card-light-mode">
+            <h1 id="title">IMC Calculator</h1>
+            <div class="ageContainer-light-mode">
+                <label for="age" class="label">Age</label>
+                <input type="number" id="age" class="inputage-light-mode">
+            </div>
+            <div class="genderContainer-light-mode">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male" class="gender">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female" class="gender">Female</label>
+            </div>
+            <div class="weight-height">
+                <div class="heightContainer-light-mode">
+                    <label for="height" class="label">Height (CM)</label>
+                    <input type="number" id="height" class="inputheight-light-mode">
+                </div>
+                <div class="weightContainer-light-mode">
+                    <label for="weight" class="label" >Weight (KG)</label>
+                    <input type="number" id="weight" class="inputweight-light-mode">
+                </div>
+            </div>
+            <button id="calculate" class="calculate-light-mode" onclick="calculateBMI()">Calculate</button>
+            <div class="resultContainer-light-mode" id="resultContainer">
+                <p id="result"></p>
+                <p id="imc"></p>
+                <p id="category"></p>
+            </div>
+        </div>
+    </div>
+        
+    </body>
+    
+    </html>
